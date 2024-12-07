@@ -1,16 +1,17 @@
+/** Define variables para la hoja de estilos */
 :root {
-    --overall-font-size: 62.5%
+    --overall-font-size: 62.5%;
 }
 
 html {
-    /**Reestablece valor de 1rem a base 10, es decir: 1rem = 10px**/
+    /** Reestablece valor de 1rem a base 10, es decir: 1rem = 10px */
     font-size: var(--overall-font-size);
+    box-sizing: border-box;
 }
 
-body{
-    font-size: 1.6 rem;
+body {
+    font-size: 1.6rem;
 }
-
 
 .header {
     background-color: blueviolet;
@@ -18,6 +19,58 @@ body{
 
 .main {
     background-color: brown;
+}
+
+.main-banner {
+    position: relative;
+}
+
+.banner-image {
+    position: relative;
+}
+
+
+
+.banner-search {
+    height: 30.5rem;
+    /* border: 1px solid yellow; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+}
+
+.banner-search h1 {
+    margin: 1rem 8.rem;
+    max-width: 87%;
+    width: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.input-search {
+
+    height: 3rem;
+    padding: .8rem 1.8rem;
+    border-radius: .7rem;
+    margin: 0.8rem;
+    max-width: 75%;
+    width: 100%;
+
+}
+
+.banner-image img {
+    height: 30.5rem;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100vw;
 }
 
 .main-wrapper {
@@ -45,7 +98,6 @@ body{
     background-color: orange;
 }
 
-
 /** Mobile First -- 0px --> 566px */
 .container {
     border: 2px dotted blue;
@@ -70,6 +122,12 @@ body{
         padding: 0 1.6rem;
     }
 
+    .input-search {
+
+        width: 38.8rem;
+        max-width: 100%;
+    }
+
 }
 
 /** 768px --> 1023px */
@@ -80,7 +138,6 @@ body{
     }
 
     .main-wrapper {
-        display: flex;
         flex-direction: row;
     }
 
@@ -90,7 +147,11 @@ body{
 
     .main-container {
         flex: 1;
+        order: initial;
     }
+
+
+
 }
 
 /** 1024px --> 1999px */
@@ -99,6 +160,19 @@ body{
         max-width: 99.2rem;
         padding: 0 3.2rem;
     }
+    .banner-image img {
+        height: 36.8rem;
+    }
+
+    .input-search {
+        width: 87rem;
+
+    }
+    .banner-search h1{
+        font-size:  3.6rem;
+    }
+
+
 }
 
 /** 1200px --> 1399px */
@@ -106,7 +180,11 @@ body{
     .container {
         max-width: 114rem;
         padding: 0 4rem;
+
     }
+
+   
+
 }
 
 /** 1400px --> 1599px */
@@ -115,6 +193,7 @@ body{
         max-width: 132rem;
         padding: 0 4.8rem;
     }
+
 }
 
 /** 1600px --> 1919px */
